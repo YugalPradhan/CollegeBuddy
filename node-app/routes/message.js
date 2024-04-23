@@ -2,9 +2,10 @@ const express=require('express')
 const router=express.Router();
 const Message=require('../models/Message')
 const Product=require('../models/Product')
+const fetchuser = require('./fetchuser');
 
 //route 3 update note
-router.post('/addmessage/:productId', fetchUser, async (req, res) => {
+router.post('/addmessage/:productId', fetchuser, async (req, res) => {
     try {
       const productId = req.params.productId;
       const { text } = req.body;
@@ -18,7 +19,6 @@ router.post('/addmessage/:productId', fetchUser, async (req, res) => {
       // Create a new message object
       const message = new Message({
         sender: userId,
-        recipient: product.user,
         product: productId,
         text
       });
@@ -32,23 +32,16 @@ router.post('/addmessage/:productId', fetchUser, async (req, res) => {
     }
   });
 
-  router.get('/messages/:productId', fetchUser, async (req, res) => {
+  router.get('/productmessages/:productId', fetchuser, async (req, res) => {
     try {
-      const productId = req.params.productId;
-      const userId = req.user.id; // Assuming fetchUser middleware sets req.user with user information
-  
+      const productId = req.params.productId;  
       // Check if the product exists
       const product = await Product.findById(productId);
       if (!product) {
         return res.status(404).json({ error: 'Product not found' });
       }  
       // Fetch messages related to the product and involving the user
-      const messages = await Message.find({
-        $or: [
-          { sender: userId, recipient: product.user, product: productId },
-          { sender: product.user, recipient: userId, product: productId }
-        ]
-      });
+      const messages = await Message.find({product: productId});
   
       res.json({ messages });
     } catch (error) {

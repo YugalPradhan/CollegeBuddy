@@ -18,6 +18,7 @@ mongoose.connect(DB_URI).then(()=>{
 app.use('/auth',require('./routes/auth'))
 app.use('/product',require('./routes/product'))
 app.use('/college',require('./routes/college'))
+app.use('/message',require('./routes/message'))
 app.get('/',(req,res)=>{
     res.json({message:"Hello World"})
 })

@@ -5,13 +5,9 @@ const MessageSchema=new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
   },
-  receiver:{
-    type: mongoose.Schema.Types.ObjectId,
-        ref: 'User'
-  },
   product:{
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'Prouct'
+    ref: 'Product'
   },
   text: {
     type: String,
