@@ -1,0 +1,137 @@
+.navbar {
+    background-color: #03040e;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top of the viewport */
+    width: 100%; /* Occupy full width */
+    z-index: 1000; /* Ensure it's above other elements */
+    border-bottom: 1px solid white;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+    
+  .navbar-logo {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    color: #fff;
+    font-size: 1.8rem;
+    text-decoration: none;
+    background: linear-gradient(to right, #1146f4, #20ec07);
+    /* Set the background-clip to text to apply the gradient to the text only */
+    -webkit-background-clip: text;
+    background-clip: text;
+    /* Set the text color to transparent to allow the gradient to show through */
+    color: transparent;
+  }
+  .nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-links {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .nav-links:hover {
+    color: #ff9900;
+  }
+  .path{
+    color:#7948ee;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 768px) {
+    .navbar-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .nav-menu {
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  
+    .nav-item {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    .nav-links {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Existing styles */
+
+.search-form {
+    display: flex;
+    margin-right: 20px; /* Adjust spacing between search bar and nav menu */
+  }
+  
+  .search-input {
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  .search-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .search-button i {
+    font-size: 0.9rem;
+  }
+  
+  .search-input:focus,
+  .search-button:focus {
+    outline: none;
+  }
+  
+  /* Existing styles */
+  .sell{
+    background-color: white;
+    border: 2px solid #3b00ff;
+    border-radius: 18px;
+    padding: 4px 20px;
+    cursor: pointer;
+  }
+  .sell-links2{
+    text-decoration: none;
+    color:#3f00d5;
+    font-size: 1.2rem;
+  }
+  .sell-links:hover,.sell-links2:hover{
+  color:#ff9900;
+  }
+  .sell-links{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+  }

@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
+}
+
+.container2 {
+    color: #fff;
+    position: relative;
+    width: 45%;
+    margin: 110px auto 0px;
+    text-align: center;
+    background-color: rgb(18, 17, 17);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
+}
+
+.header h1 {
+    font-size: 48px;
+    color: #fff;
+    font-family: 'Pacifico', cursive;
+}
+
+.content p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.get-started-button a {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2a3439;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 40px;
+    transition: background-color 0.3s ease;
+}
+
+.get-started-button a:hover {
+    background-color: #45a049;
+}
+
+.boy {
+    position: absolute;
+    width: 70%;
+    bottom: 0px;
+    left: -31%;
+}
+
+.wrapper {
+    display: grid;
+    place-content: center;
+    background-color: var(--background-color);
+    height: 20px;
+    font-family: "Oswald", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin-bottom: 20px;
+  }
+  
+  .wrapper > div {
+    grid-area: 1/1/-1/-1;
+  }
+  .top {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 48%, 0% 58%);
+  }
+  .bottom {
+    clip-path: polygon(0% 60%, 100% 50%, 100% 100%, 0% 100%);
+    color: #2b90dc;
+    background: -webkit-linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background: linear-gradient(177deg, black 53%, var(--text-color) 65%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transform: translateX(-0.02em);
+  }
