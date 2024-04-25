@@ -1,11 +1,9 @@
 import React from 'react';
 import '../style/Product.css'; // Import your CSS for styling
 import { useNavigate } from 'react-router-dom';
-const Product = ({ product,changeProduct}) => {
-  let navigate=useNavigate();
+const Product = ({}) => {
   const handleClick=()=>{
-    changeProduct(product);
-    navigate('/productdetails');
+    const navigate=useNavigate();
   }
   return (
     <div className="product-card" onClick={handleClick}>  

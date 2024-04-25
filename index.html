@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Chat</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .chat-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        .sender-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .message-body {
+            padding-left: 20px;
+        }
+        .user1 {
+            background-color: #a8d0e6;
+        }
+        .user2 {
+            background-color: #ffc0cb;
+        }
+        .user3 {
+            background-color: #9fd7a8;
+        }
+        /* Add more classes for additional users if needed */
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="message user1">
+            <div class="sender-name">User1</div>
+            <div class="message-body">Hello everyone!</div>
+        </div>
+        <div class="message user2">
+            <div class="sender-name">User2</div>
+            <div class="message-body">Hey there!</div>
+        </div>
+        <div class="message user3">
+            <div class="sender-name">User3</div>
+            <div class="message-body">Hi all!</div>
+        </div>
+        <!-- Add more messages with different user classes as needed -->
+    </div>
+</body>
+</html>

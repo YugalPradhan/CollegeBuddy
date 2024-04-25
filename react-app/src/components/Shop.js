@@ -3,7 +3,7 @@ import axios from 'axios';
 import Product from './Product'; // Import the Product component
 import '../style/Product.css'; // Import your CSS for styling
 
-const Shop = ({path,navchange,searchTerm,setKeyword} ) => {
+const Shop = ({path,navchange,searchTerm,changeProduct} ) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     // Fetch products data from the backend when the component mounts
@@ -12,7 +12,7 @@ const Shop = ({path,navchange,searchTerm,setKeyword} ) => {
         let response;
       if(!localStorage.getItem('token'))
       {response = await axios.get('http://localhost:80/product/allproducts');}
-      else if(searchTerm!="")
+      else if(searchTerm!=="")
       {response = await axios.get(`http://localhost:80/product/search?keyword=${searchTerm}`,{
         headers: {
           "auth-token":localStorage.getItem('token')
@@ -37,7 +37,7 @@ const Shop = ({path,navchange,searchTerm,setKeyword} ) => {
       <h2 className='p'>Products</h2>
       <div className="products-list">
         {products.map(product => (
-          <Product key={product._id} product={product} />
+          <Product key={product._id} product={product} changeProduct={changeProduct}/>
         ))}
       </div>
     </div>

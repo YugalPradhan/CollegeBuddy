@@ -113,6 +113,15 @@ router.get('/search', fetchuser, async (req, res) => {
       res.status(500).json({ message: 'Server Error' });
   }
 });
-
+router.get('/getproduct/:id', fetchuser, async (req, res) => {
+  try {
+      const productId = req.params.id;
+      const product = await Product.findById(productId);
+      res.json(product);
+  } catch (err) {
+      console.error(err);
+      res.status(500).json({ message: 'Server Error' });
+  }
+});
 
 module.exports=router;

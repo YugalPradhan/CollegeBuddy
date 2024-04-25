@@ -1,0 +1,105 @@
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%; /* Adjust width as needed */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add shadow for a better look */
+  }
+  
+  .product-image-container {
+    position: relative;
+    width: 100%; /* Fixed width for the container */
+    height: 70vh; /* Fixed height for the container */
+    overflow: hidden; /* Ensure the image doesn't overflow the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111010;
+    border-radius: 5px;
+  }
+  
+  .product-image {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;;
+  }
+  
+  
+  
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px; /* Increase font size for better visibility */
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out; /* Add a smooth transition effect */
+    background-color:#4b367e;
+  }
+  
+  .prev-button {
+    left: 10px; /* Adjust button positions */
+  }
+  
+  .next-button {
+    right: 10px; /* Adjust button positions */
+  }
+  
+  .prev-button:hover,
+  .next-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .product-info {
+    width: 100%;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    position: relative;
+  }
+  
+  .product-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    margin-left: 10px;
+  }
+  
+  .product-info p {
+    margin-bottom: 5px;
+    margin-left: 10px;
+  }
+  
+  .product-info p:last-child {
+    margin-bottom: 0; /* Remove margin for the last paragraph */
+    margin-left: 10px;
+  }
+  
+  .product-info p.date {
+    font-style: italic; /* Change font style for the date */
+    margin-left: 10px;
+  }
+  
+  .date {
+    font-style: italic;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+  }
+  .parent-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .product-info p span{
+  font-weight: bold;
+  font-size: 0.9em;
+  }

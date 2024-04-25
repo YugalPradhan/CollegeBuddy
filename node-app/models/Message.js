@@ -16,6 +16,9 @@ const MessageSchema=new Schema({
   timestamp: {
     type: Date,
     default: Date.now
+  },
+  senderName:{
+    type:String
   }
 });
 const Message=mongoose.model('Message',MessageSchema);
