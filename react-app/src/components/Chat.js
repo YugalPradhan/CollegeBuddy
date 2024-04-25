@@ -62,6 +62,7 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
+      <div className='heading'>Chat With Seller</div>
       <div className="chat-box">
         {messages.map((message, index) => (
           <div key={index} className={message.sender === currentUser? "outgoing" : "incoming"}>

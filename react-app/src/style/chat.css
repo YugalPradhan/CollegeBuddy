@@ -1,8 +1,18 @@
 /* Chat Container */
 .chat-container {    
   padding: 20px;
+  width: 35%;
   }
-  
+  .heading{
+    background-color: #f4f4f4;
+    font-weight: bold;
+    margin: 10px;
+    margin-bottom: 0px;
+    font-size: larger;
+    text-align: center;
+    border-radius:10px;
+    padding: 10px;
+  }
   /* Chat Messages */
   .chat-box {
     background-color: #f4f4f4;
@@ -10,8 +20,9 @@
     overflow-y: auto;
     display: flex; /* Add this line */
     flex-direction: column; /* Add this line */
-    height:70vh;
+    height:65vh;
     margin:10px;
+    margin-top: 0px;
     padding: 10px;
   }
   
