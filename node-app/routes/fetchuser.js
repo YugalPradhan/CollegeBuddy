@@ -10,7 +10,6 @@ if(!token){
 try {
     const data=jwt.verify(token,JWT_SECRET);
     req.user=data.user;
-    console.log(data.user);
     next();
 } catch (error) {
     return res.status(500).send({error})

@@ -3,7 +3,7 @@ import axios from 'axios';
 import Product from './Product'; // Import the Product component
 import '../style/Product.css'; // Import your CSS for styling
 
-const Shop = ({path,navchange,searchTerm,changeProduct} ) => {
+const Shop = ({navchange,searchTerm} ) => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     // Fetch products data from the backend when the component mounts
@@ -26,10 +26,8 @@ const Shop = ({path,navchange,searchTerm,changeProduct} ) => {
       setProducts(response.data);
     } catch (error) {
       console.error('Error searching products:', error);
-    }}
-    if(path!=="shop"){
-      navchange("shop")
     }
+    navchange("shop")}
     fetchProducts();
   }, [searchTerm]); // Empty dependency array ensures useEffect runs only once when the component mounts
   return (
@@ -37,7 +35,7 @@ const Shop = ({path,navchange,searchTerm,changeProduct} ) => {
       <h2 className='p'>Products</h2>
       <div className="products-list">
         {products.map(product => (
-          <Product key={product._id} product={product} changeProduct={changeProduct}/>
+          <Product key={product._id} product={product}/>
         ))}
       </div>
     </div>

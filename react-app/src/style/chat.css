@@ -10,13 +10,15 @@
     margin-bottom: 0px;
     font-size: larger;
     text-align: center;
-    border-radius:10px;
+    border-top-left-radius: 20px; /* Adjust the value as needed */
+    border-top-right-radius: 20px; 
     padding: 10px;
   }
   /* Chat Messages */
   .chat-box {
     background-color: #f4f4f4;
-    border-radius: 10px;
+    border-bottom-left-radius: 20px; /* Adjust the value as needed */
+    border-bottom-right-radius: 20px; 
     overflow-y: auto;
     display: flex; /* Add this line */
     flex-direction: column; /* Add this line */

@@ -2,17 +2,16 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import '../style/chat.css'; // Import your CSS file for styling
 
-const Chat = () => {
+const Chat = ({product}) => {
   const [messages, setMessages] = useState([]);
   const [newMessage, setNewMessage] = useState('');
   const [currentUser, setCurrentUser] = useState(null); // Assuming user object is stored here
-  const productId = '66266ba1f8314653a7ec6dd1'; // Replace with the actual product ID
   const chatEndRef = useRef(null); // Reference to the end of the chat container
 
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await axios.get(`http://localhost:80/message/productmessages/${productId}`, {
+        const response = await axios.get(`http://localhost:80/message/productmessages/${product._id}`, {
           headers: {
             "auth-token": localStorage.getItem('token')
           }
@@ -25,7 +24,7 @@ const Chat = () => {
     };
 
     fetchMessages();
-  }, [productId]);
+  }, [product]);
 
   useEffect(() => {
     scrollToBottom();
@@ -37,7 +36,7 @@ const Chat = () => {
 
   const sendMessage = async () => {
     try {
-      const response = await axios.post(`http://localhost:80/message/addmessage/${productId}`, { text: newMessage }, {
+      const response = await axios.post(`http://localhost:80/message/addmessage/${product._id}`, { text: newMessage }, {
         headers: {
           "auth-token": localStorage.getItem('token')
         }

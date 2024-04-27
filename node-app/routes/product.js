@@ -63,7 +63,19 @@ router.get('/allproducts', async (req, res) => {
     res.status(500).json({ message: 'Failed to fetch products' });
   }
 });
+//http://localhost:80/product/getproduct/${id}
 //for same college
+router.get('/getproduct/:id', async (req, res) => {
+  try {
+    // Fetch all products from the database
+    const id=req.params.id;
+    const product = await Product.findById(id);
+    res.status(200).json(product);
+  } catch (error) {
+    console.error('Error fetching product:', error);
+    res.status(500).json({ message: 'Failed to fetch product' });
+  }
+});
 router.get('/collegeproducts',fetchuser, async (req, res) => {
   try {
     const users=await User.find({college:req.user.college,_id:{$ne:req.user.id}});

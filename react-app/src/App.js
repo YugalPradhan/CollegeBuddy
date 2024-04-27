@@ -10,7 +10,6 @@ import {
   } from "react-router-dom";
 import Signup from './components/Signup';
 import Shop from './components/Shop';
-import Chat from './components/Chat';
 import ProductDetails from './components/ProductDetails';
 function App(){
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,10 +19,6 @@ function App(){
   }
   const setKeyword=(keyword)=>{
     setSearchTerm(keyword);
-  }
-  const [curproduct,SetCurProduct]=useState([]);
-  const changeProduct=(product)=>{
-    SetCurProduct(product);
   }
     return (
         <Router>
@@ -40,11 +35,9 @@ function App(){
         </Route>    
         <Route exact path="/addproduct" element={<AddProduct  navchange={navchange}/>}>
         </Route>     
-        <Route exact path="/shop" element={<Shop  path={path} navchange={navchange}  searchTerm={searchTerm} changeProduct={changeProduct}/>}>
+        <Route exact path="/shop" element={<Shop  path={path} navchange={navchange}  searchTerm={searchTerm}/>}>
         </Route>     
-        <Route exact path="/chat" element={<Chat />}>
-        </Route>
-        <Route exact path="/productdetails" element={<ProductDetails curproduct={curproduct}/>}>
+        <Route exact path="/productdetails/:id" element={<ProductDetails/>}>
         </Route>
       </Routes>
       </div>
