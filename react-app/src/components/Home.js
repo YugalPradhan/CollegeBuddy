@@ -1,11 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {Typewriter} from 'react-simple-typewriter';
 import '../style/home.css'
 import { Link } from 'react-router-dom';
-const Home = ({navchange}) => {
-    useEffect(() => {
-        navchange("home")
-    })
+const Home = () => {
     return (
         <div className="container2">
           <img src="boy.png" alt="" className='boy'></img>

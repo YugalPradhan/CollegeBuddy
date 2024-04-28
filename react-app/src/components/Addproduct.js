@@ -1,11 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, { useState } from 'react';
 import '../style/Signup.css';
 import axios from 'axios';
 
-const AddProduct = ({navchange}) => {
-  useEffect(() => {
-    navchange("addproduct")
-})
+const AddProduct = () => {
   const [productName, setProductName] = useState('');
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
